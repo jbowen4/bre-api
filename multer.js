@@ -12,14 +12,6 @@ aws.config.update({
 
 const s3 = new aws.S3();
 
-// Set The Storage Engine
-// const storage = multer.diskStorage({
-//     destination: 'uploads/',
-//     filename: function (req, file, cb) {
-//         cb(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname));
-//     }
-// });
-
 // Init Upload
 const upload = multer({
     storage: multerS3({
